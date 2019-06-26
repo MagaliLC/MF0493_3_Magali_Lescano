@@ -1,6 +1,7 @@
 package com.example.mf0493_3_magali_lescano.model;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
@@ -24,10 +25,6 @@ public class Film {
         this.publicationYear = publicationYear;
         this.rating = rating;
         this.imageUrl = imageUrl;
-    }
-
-    public Film() {
-        id = UUID.randomUUID().toString();
     }
 
     @NonNull

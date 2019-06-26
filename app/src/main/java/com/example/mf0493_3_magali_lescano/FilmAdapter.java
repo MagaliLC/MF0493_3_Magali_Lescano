@@ -40,8 +40,13 @@ public class FilmAdapter extends ArrayAdapter<Film> {
         Film f = data.get(position);
         tv_title.setText(f.getTitle());
         tv_rating.setText(String.valueOf(f.getRating()));
-
+setRatingcolor(tv_rating);
         return row;
+    }
+
+    private void setRatingcolor(TextView tv_rating) {
+        int rating = Integer.parseInt(tv_rating.getText());
+        if ()
     }
 }
 

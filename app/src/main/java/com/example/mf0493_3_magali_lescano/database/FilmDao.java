@@ -1,5 +1,6 @@
 package com.example.mf0493_3_magali_lescano.database;
 
+import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
@@ -9,6 +10,7 @@ import java.util.List;
 
 import com.example.mf0493_3_magali_lescano.model.Film;
 
+@Dao
 public interface FilmDao {
     @Query("SELECT * FROM film")
     List<Film> getFilms();

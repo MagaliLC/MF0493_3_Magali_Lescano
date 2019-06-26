@@ -2,6 +2,7 @@ package com.example.mf0493_3_magali_lescano;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -49,10 +50,11 @@ public class MainActivity extends AppCompatActivity {
         films.addAll(controller.getFilms());
         adapter.notifyDataSetChanged();
     }
+
     @Override
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
@@ -60,10 +62,26 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.addPost:
-                toForm();
+            case R.id.addFilm:
+                addFilm();
+                return (true);
+
+
+            case R.id.inspiration:
+                //HACER LA PARTE DE INSPIRATION
+                toInspiration();
                 return (true);
         }
         return (super.onOptionsItemSelected(item));
     }
+
+
+    private void addFilm() {
+        Intent intent = new Intent(MainActivity.this, AddFilmActivity.class);
+        startActivity(intent);
+    }
+
+    private void toInspiration() {
+    }
+
 }
