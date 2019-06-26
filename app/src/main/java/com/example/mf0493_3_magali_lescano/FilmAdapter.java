@@ -37,18 +37,30 @@ public class FilmAdapter extends ArrayAdapter<Film> {
         TextView tv_title = row.findViewById(R.id.tv_title);
         TextView tv_rating = row.findViewById(R.id.tv_rating);
 
+
         Film f = data.get(position);
         tv_title.setText(f.getTitle());
         tv_rating.setText(String.valueOf(f.getRating()));
-setRatingcolor(tv_rating);
+        int rating = f.getRating();
+        setRatingcolor(rating, tv_rating);
         return row;
     }
 
-    private void setRatingcolor(TextView tv_rating) {
-        int rating = Integer.parseInt(tv_rating.getText());
-        if ()
+    private void setRatingcolor(int rating, TextView tv_rating) {
+        if (rating < 2) {
+            tv_rating.setTextColor(context.getResources().getColor(R.color.red));
+
+        } else if (rating < 4) {
+            tv_rating.setTextColor(context.getResources().getColor(R.color.black));
+
+        } else if (rating < 6) {
+            tv_rating.setTextColor(context.getResources().getColor(R.color.green));
+        }
+
     }
 }
+
+
 
 
 
