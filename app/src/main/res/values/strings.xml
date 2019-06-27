@@ -10,7 +10,7 @@
     <string name="img_url">URL de la imagen</string>
     <string name="comment">Comentario</string>
     <string name="email">Email</string>
-   <string name="hint_email">Introduce el email</string>
+    <string name="hint_email">Introduce el email</string>
     <string name="hint_pass">Introduce la contraseña</string>
     <string name="films_url">https://www.abc.es/play/cine/peliculas/</string>
     <string name="title_hint">Escribe el título</string>
@@ -21,4 +21,5 @@
     <string name="add">Añadir</string>
     <string name="empty_field">Este campo no puede estar vacío</string>
     <string name="rating_range">La nota debe estar comprendida entre 0 y 5</string>
+    <string name="delete">Borrar</string>
 </resources>

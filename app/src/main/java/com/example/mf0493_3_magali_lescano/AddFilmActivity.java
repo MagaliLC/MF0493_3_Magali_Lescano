@@ -49,7 +49,6 @@ public class AddFilmActivity extends AppCompatActivity {
 
     private boolean checkFields(String title, String description, String year, String rating, String url) {
         boolean valid = true;
-        int ratingNum = Integer.parseInt(rating);
 
         if ("".equals(title)) {
             et_title.setError(getString(R.string.empty_field));
@@ -66,10 +65,11 @@ public class AddFilmActivity extends AppCompatActivity {
         if ("".equals(rating)) {
             et_rating.setError(getString(R.string.empty_field));
             valid = false;
-        }
-        if ((ratingNum > 5) ||(ratingNum<0)) {
-            et_rating.setError(getString(R.string.rating_range));
-            valid = false;
+        } else {
+            if ((Integer.parseInt(rating) > 5) || (Integer.parseInt(rating)  < 0)) {
+                et_rating.setError(getString(R.string.rating_range));
+                valid = false;
+            }
         }
         if ("".equals(url)) {
             et_url.setError(getString(R.string.empty_field));

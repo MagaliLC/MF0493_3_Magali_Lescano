@@ -42,28 +42,30 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.lv_films);
         listView.setAdapter(adapter);
         controller = FilmController.get(this);
-    }
-
-    private void LogIn() {
-        prefs = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-        boolean isLogged = prefs.getBoolean("isLogged", true);
-        if (!isLogged) {
-            toLogin();
-        }
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 String filmId = films.get(position).getId();
-                sendData(view, personId);
-                adapter.notifyDataSetChanged();
+                sendData(view, filmId);
+                // adapter.notifyDataSetChanged();
             }
         });
     }
-    public void sendData(View view, String personId) {
+
+    private void LogIn() {
+        prefs = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        boolean isLogged = prefs.getBoolean("isLogged", false);
+        if (!isLogged) {
+            toLogin();
+        }
+
+
+    }
+    public void sendData(View view, String filmId) {
         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-        intent.putExtra("person_id", personId);
+        intent.putExtra("film_id", filmId);
         startActivity(intent);
     }
 
