@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MF0493_3_Magali_Lescano</string>
+    <string name="app_name">MyFilmList</string>
     <string name="title">Título</string>
     <string name="rating">Nota</string>
     <string name="password">Contraseña</string>
