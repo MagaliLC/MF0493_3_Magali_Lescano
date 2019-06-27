@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
 
             case R.id.inspiration:
-                //HACER LA PARTE DE INSPIRATION
                 toInspiration();
                 return (true);
         }
@@ -99,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void toInspiration() {
+        Intent intent = new Intent(MainActivity.this, InspirationActivity.class);
+        startActivity(intent);
     }
 
 }

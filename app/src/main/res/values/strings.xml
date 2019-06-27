@@ -2,4 +2,15 @@
     <string name="app_name">MF0493_3_Magali_Lescano</string>
     <string name="title">Título</string>
     <string name="rating">Nota</string>
+    <string name="password">Contraseña</string>
+    <string name="enter">Entrar</string>
+    <string name="empty">E-mail y contraseña no pueden estar vacíos</string>
+    <string name="description">Descripción</string>
+    <string name="year">Año</string>
+    <string name="url">URL</string>
+    <string name="comment">Comentario</string>
+    <string name="email">Email</string>
+   <string name="hint_email">Introduce el email</string>
+    <string name="hint_pass">Introduce la contraseña</string>
+    <string name="films_url">https://www.abc.es/play/cine/peliculas/</string>
 </resources>
