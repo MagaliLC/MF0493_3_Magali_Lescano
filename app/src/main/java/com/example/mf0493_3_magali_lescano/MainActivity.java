@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         LogIn();
-        
+
         films = new ArrayList<Film>();
         adapter = new FilmAdapter(this, R.layout.film_row, films);
         listView = findViewById(R.id.lv_films);
@@ -48,8 +50,22 @@ public class MainActivity extends AppCompatActivity {
         if (!isLogged) {
             toLogin();
         }
-    }
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                String filmId = films.get(position).getId();
+                sendData(view, personId);
+                adapter.notifyDataSetChanged();
+            }
+        });
+    }
+    public void sendData(View view, String personId) {
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+        intent.putExtra("person_id", personId);
+        startActivity(intent);
+    }
 
     @Override
     protected void onResume() {

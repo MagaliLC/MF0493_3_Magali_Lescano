@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     public void btnEnterPressed(View view) {
         String email = et_email.getText().toString();
         String password = et_password.getText().toString();
-        if (checkFields(email,password)) {
+        if (checkFields(email, password)) {
             setLogged();
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
