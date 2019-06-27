@@ -13,4 +13,8 @@
    <string name="hint_email">Introduce el email</string>
     <string name="hint_pass">Introduce la contraseña</string>
     <string name="films_url">https://www.abc.es/play/cine/peliculas/</string>
+    <string name="title_hint">Escribe el título</string>
+    <string name="description_hint">Escribe la descripción</string>
+    <string name="rating_hint">Escribe la nota</string>
+    <string name="img_url_hint">Escribe la url de la imagen</string>
 </resources>

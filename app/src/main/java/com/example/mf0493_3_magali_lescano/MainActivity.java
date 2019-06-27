@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private void LogIn() {
         prefs = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         boolean isLogged = prefs.getBoolean("isLogged", true);
-        if (isLogged) {
+        if (!isLogged) {
             toLogin();
         }
     }

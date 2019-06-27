@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     private void setLogged() {
         prefs = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean("isLogged", false);
+        editor.putBoolean("isLogged", true);
         editor.commit();
     }
 
