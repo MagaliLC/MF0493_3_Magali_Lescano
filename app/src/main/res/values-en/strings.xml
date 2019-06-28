@@ -22,4 +22,5 @@
     <string name="empty_field">This field cannot be empty</string>
     <string name="rating_range">Rating must be between 0 and 5</string>
     <string name="delete">Delete</string>
+    <string name="error">There was an error :(</string>
 </resources>

@@ -3,6 +3,7 @@
     package="com.example.mf0493_3_magali_lescano">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
