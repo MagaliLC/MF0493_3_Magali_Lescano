@@ -45,10 +45,10 @@ public class DetailActivity extends AppCompatActivity {
 
     private void loadFilms() {
         tv_title.setText(f.getTitle());
-        tv_description.setText(f.getDescription());
-        tv_rating.setText(String.valueOf(f.getRating()));
-        tv_year.setText(String.valueOf(f.getPublicationYear()));
         Picasso.get().load(f.getImageUrl()).into(iv_film_img);
+        tv_year.setText(String.valueOf(f.getPublicationYear()));
+        tv_rating.setText(String.valueOf(f.getRating()));
+        tv_description.setText(f.getDescription());
     }
 
     public void btnDeletePressed(View view) {
