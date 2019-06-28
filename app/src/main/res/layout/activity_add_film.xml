@@ -4,116 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFilmActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".AddFilmActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/title"
             android:text="@string/title"
-            android:layout_margin="20dp"/>
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/et_title"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:layout_margin="20dp"
+            android:layout_weight="2"
             android:hint="@string/title_hint"
-            android:layout_margin="20dp"/>
+            android:inputType="text" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/description"
             android:text="@string/description"
-            android:layout_margin="20dp"/>
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/et_description"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:inputType="textLongMessage"
+            android:layout_margin="20dp"
+            android:layout_weight="2"
             android:hint="@string/description_hint"
-            android:layout_margin="20dp"/>
+            android:inputType="textLongMessage" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/year"
             android:text="@string/year"
-            android:layout_margin="20dp"/>
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/et_year"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:layout_margin="20dp"
+            android:layout_weight="2"
             android:hint="@string/year_hint"
-            android:layout_margin="20dp"/>
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/rating"
             android:text="@string/rating"
-            android:layout_margin="20dp"/>
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/et_rating"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:layout_margin="20dp"
+            android:layout_weight="2"
             android:hint="@string/rating_hint"
-            android:layout_margin="20dp"/>
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/url"
             android:text="@string/img_url"
-            android:layout_margin="20dp"/>
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/et_url"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:layout_margin="20dp"
+            android:layout_weight="2"
             android:hint="@string/img_url_hint"
-            android:layout_margin="20dp"/>
+            android:inputType="text" />
     </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/blue"
-        android:textColor="@color/white"
-        android:text="@string/add"
         android:layout_margin="20dp"
+        android:background="@color/blue"
         android:onClick="btnAddPressed"
-        />
+        android:text="@string/add"
+        android:textColor="@color/white" />
 </LinearLayout>
