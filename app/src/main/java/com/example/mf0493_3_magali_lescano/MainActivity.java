@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         return (super.onOptionsItemSelected(item));
     }
 
-
     private void addFilm() {
         Intent intent = new Intent(MainActivity.this, AddFilmActivity.class);
         startActivity(intent);
