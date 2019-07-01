@@ -14,9 +14,9 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:drawableLeft="@drawable/email"
             android:drawablePadding="5dp"
             android:text="@string/email" />
@@ -24,9 +24,9 @@
         <EditText
             android:id="@+id/et_email"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="2"
             android:hint="@string/hint_email"
             android:inputType="textEmailAddress" />
     </LinearLayout>
@@ -38,9 +38,9 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:drawableLeft="@drawable/password"
             android:drawablePadding="5dp"
             android:text="@string/password" />
@@ -48,9 +48,9 @@
         <EditText
             android:id="@+id/et_password"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="2"
             android:hint="@string/hint_pass"
             android:inputType="textPassword" />
     </LinearLayout>
@@ -60,8 +60,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/films_url"
-        android:onClick="goToUrl"/>
+        android:onClick="goToUrl"
+        android:text="@string/films_url" />
 
     <Button
         android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
         android:layout_gravity="center"
         android:layout_margin="30dp"
         android:background="@color/blue"
+        android:onClick="btnEnterPressed"
         android:text="@string/enter"
-        android:textColor="@color/white"
-        android:onClick="btnEnterPressed"/>
+        android:textColor="@color/white" />
 </LinearLayout>

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyFilmList</string>
     <string name="title">Title</string>
-    <string name="rating">Nota</string>
+    <string name="rating">Rating</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="enter">Enter</string>

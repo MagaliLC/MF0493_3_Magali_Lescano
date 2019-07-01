@@ -33,12 +33,19 @@ public class InspirationActivity extends AppCompatActivity {
         listView = findViewById(R.id.lv_ghibli);
         listView.setAdapter(adapter);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         getFilmsFromRetrofit();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     private void getFilmsFromRetrofit() {

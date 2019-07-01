@@ -42,11 +42,11 @@ public class FilmAdapter extends ArrayAdapter<Film> {
         tv_title.setText(f.getTitle());
         tv_rating.setText(String.valueOf(f.getRating()));
         int rating = f.getRating();
-        setRatingcolor(rating, tv_rating, tv_title);
+        setRatingColor(rating, tv_rating, tv_title);
         return row;
     }
 
-    private void setRatingcolor(int rating, TextView tv_rating, TextView tv_title) {
+    private void setRatingColor(int rating, TextView tv_rating, TextView tv_title) {
         if (rating < 2) {
             tv_title.setTextColor(context.getResources().getColor(R.color.red));
             tv_rating.setTextColor(context.getResources().getColor(R.color.red));

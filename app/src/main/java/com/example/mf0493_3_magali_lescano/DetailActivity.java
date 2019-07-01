@@ -13,9 +13,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
-    ArrayList<Film> films;
     FilmController controller;
-    String personId;
+    String filmId;
     TextView tv_title, tv_description, tv_rating, tv_year;
     ImageView iv_film_img;
     private Film f;
@@ -27,7 +26,7 @@ public class DetailActivity extends AppCompatActivity {
 
         controller = FilmController.get(this);
 
-        personId = getIntent().getStringExtra("film_id");
+        filmId = getIntent().getStringExtra("film_id");
 
         tv_title = findViewById(R.id.tv_title);
         tv_description = findViewById(R.id.tv_description);
@@ -35,7 +34,15 @@ public class DetailActivity extends AppCompatActivity {
         tv_year = findViewById(R.id.tv_year);
         iv_film_img = findViewById(R.id.iv_film_img);
 
-        getFilm(personId);
+        getFilm(filmId);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     private void getFilm(String filmId) {

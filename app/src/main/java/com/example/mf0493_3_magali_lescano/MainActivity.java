@@ -1,7 +1,6 @@
 package com.example.mf0493_3_magali_lescano;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,7 +22,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences prefs;
-    Activity activity = this;
     ListView listView;
     FilmController controller;
     FilmAdapter adapter;
@@ -60,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
         if (!isLogged) {
             toLogin();
         }
-
-
     }
+
     public void sendData(View view, String filmId) {
         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
         intent.putExtra("film_id", filmId);
@@ -79,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
     }
-
 
     private void getFilms() {
         films.clear();
@@ -102,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
                 addFilm();
                 return (true);
 
-
             case R.id.inspiration:
                 toInspiration();
                 return (true);
@@ -120,5 +115,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, InspirationActivity.class);
         startActivity(intent);
     }
-
 }

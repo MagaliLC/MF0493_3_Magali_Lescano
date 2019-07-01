@@ -14,7 +14,6 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class AddFilmActivity extends AppCompatActivity {
-    ArrayList<Film> films;
     FilmController controller;
     EditText et_title, et_description, et_year, et_rating, et_url;
     Film f;
@@ -23,6 +22,7 @@ public class AddFilmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_film);
+
         controller = FilmController.get(this);
         et_title = findViewById(R.id.et_title);
         et_description = findViewById(R.id.et_description);
@@ -30,6 +30,13 @@ public class AddFilmActivity extends AppCompatActivity {
         et_rating = findViewById(R.id.et_rating);
         et_url = findViewById(R.id.et_url);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     public void btnAddPressed(View view) {
@@ -66,7 +73,7 @@ public class AddFilmActivity extends AppCompatActivity {
             et_rating.setError(getString(R.string.empty_field));
             valid = false;
         } else {
-            if ((Integer.parseInt(rating) > 5) || (Integer.parseInt(rating)  < 0)) {
+            if ((Integer.parseInt(rating) > 5) || (Integer.parseInt(rating) < 0)) {
                 et_rating.setError(getString(R.string.rating_range));
                 valid = false;
             }
