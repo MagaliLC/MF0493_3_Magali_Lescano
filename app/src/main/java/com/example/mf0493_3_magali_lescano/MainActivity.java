@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
                 String filmId = films.get(position).getId();
                 sendData(view, filmId);
-
             }
         });
     }
